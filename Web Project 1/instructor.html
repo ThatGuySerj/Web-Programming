@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="NicoStyles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Add Instructor</title>
+</head>
+
+<body class="bg-light d-flex flex-column min-vh-100">
+    <header class="bg-dark text-white py-3 text-center">
+        <h1>Instructor Selection</h1>
+    </header>
+
+    <nav class="bg-secondary">
+        <ul class="nav flex-column p-3">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="Nico.html">Home Page</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="container mt-4">
+        <h2 class="mb-4 text-center">Add an Instructor</h2>
+        <form class="enrollstud card p-4 shadow-sm">
+
+            <div class="mb-3">
+                <label for="firstname" class="form-label">Instructor First Name</label>
+                <input type="text" class="form-control" id="firstname" placeholder="Enter first name" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="lastname" class="form-label">Instructor Last Name</label>
+                <input type="text" class="form-control" id="lastname" placeholder="Enter last name" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="rank" class="form-label">Instructor Rank</label>
+                <select class="form-control" id="rank" required>
+                    <option value="">Select Rank</option>
+                    <option value="Instructor">Instructor</option>
+                    <option value="Assistant Professor">Assistant Professor</option>
+                    <option value="Associate Professor">Associate Professor</option>
+                    <option value="Professor">Professor</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="dept" class="form-label">Instructor Department</label>
+                <input type="text" class="form-control" id="dept" placeholder="Enter professor department" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Instructor Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">Submit</button>
+        </form>
+    </section>
+
+</body>
+</html>

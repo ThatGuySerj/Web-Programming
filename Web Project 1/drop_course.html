@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="NicoStyles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Course Drop System</title>
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+    <header class="bg-dark text-white py-3 text-center">
+        <h1>Course Drop System</h1>
+    </header>
+
+    <nav class="bg-secondary">
+        <ul class="nav flex-column p-3">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="Nico.html">Home Page</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <section class="container mt-4">
+            <h2 class="mb-4 text-center">Drop a Course</h2>
+                <form class="enrollstud card p-4 shadow-sm">
+
+                    <div class="mb-3">
+                        <label for="drop_first_name" class="form-label">Student's First Name:</label>
+                        <input type="text" class="form-control" id="drop_first_name" name="drop_first_name" placeholder="Input First Name Here" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="drop_last_name" class="form-label">Student's Last Name:</label>
+                        <input type="text" class="form-control" id="drop_last_name" name="drop_last_name" placeholder="Input Last Name Here" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="drop_semester" class="form-label">Semester and Year:</label>
+                        <input type="text" class="form-control" id="drop_semester" name="drop_semester" placeholder="Input Semester Then Year Here" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="drop_course_prefix" class="form-label">Course Prefix:</label>
+                        <input type="text" class="form-control" id="drop_course_prefix" name="drop_course_prefix" placeholder="Input Prefix Here" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="drop_course_number" class="form-label">Course Number:</label>
+                        <input type="text" class="form-control" id="drop_course_number" name="drop_course_number" placeholder="Input Course Number Here" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="drop_course_section" class="form-label">Course Section:</label>
+                        <input type="text" class="form-control" id="drop_course_section" name="drop_course_section" placeholder="Input Course Section Here" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-danger w-100">Drop Course</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header {
+    background: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+nav {
+    background: #444;
+    color: white;
+    width: 200px;
+}
+
+nav ul li {
+    margin: 15px 0;
+}
+
+nav ul li a {
+    color: white;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+/* Form Styles */
+.enrollstud {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    max-width: 500px; 
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.enrollstud label {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.enrollstud input,
+.enrollstud select {
+    font-size: 10px;
+}
+
+.enrollstud button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.enrollstud button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .enrollstud {
+        max-width: 700px;
+    }
+
+    .form-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    .form-group label,
+    .form-group input,
+    .form-group select {
+        flex: 1;
+    }
+}
+
+@media (min-width: 1024px) {
+    .enrollstud {
+        max-width: 900px;
+    }
+
+    .enrollstud input, 
+    .enrollstud select {
+        font-size: 18px;
+    }
+
+    .enrollstud button {
+        font-size: 18px;
+        padding: 12px;
+    }
+}

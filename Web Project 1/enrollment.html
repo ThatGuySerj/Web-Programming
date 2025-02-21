@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="NicoStyles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Student Enrollment</title>
+</head>
+
+<body class="bg-light d-flex flex-column min-vh-100">
+    <header class="bg-dark text-white py-3 text-center">
+        <h1>Student Enrollment</h1>
+    </header>
+
+    <nav class="bg-secondary">
+        <ul class="nav flex-column p-3">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="Nico.html">Home Page</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="container mt-4">
+        <h2 class="mb-4 text-center">Enroll a Student</h2>
+        <form class="enrollstud card p-4 shadow-sm">
+
+            <div class="mb-3">
+                <label for="firstname" class="form-label">Student First Name</label>
+                <input type="text" class="form-control" id="firstname" placeholder="Enter first name" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="lastname" class="form-label">Student Last Name</label>
+                <input type="text" class="form-control" id="lastname" placeholder="Enter last name" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="year" class="form-label">Student Year</label>
+                <select class="form-control" id="year" required>
+                    <option value="">Select Year</option>
+                    <option value="Freshman">Freshman</option>
+                    <option value="Sophomore">Sophomore</option>
+                    <option value="Junior">Junior</option>
+                    <option value="Senior">Senior</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="major" class="form-label">Student Major</label>
+                <input type="text" class="form-control" id="major" placeholder="Enter major" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Student Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Enroll Student</button>
+        </form>
+    </section>
+</html>
