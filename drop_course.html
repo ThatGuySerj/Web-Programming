@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Drop System</title>
+    <style>
+        input {
+            width: 300px;
+            height: 30px;
+            font-size: 16px;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Course Drop System</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="Nico.html">Home Page</a></li>
+        </ul>
+    </nav>
+    
+    <section>
+        <h2>Drop a Course</h2>
+        <form>
+            <label for="drop_first_name">Student's First Name:</label>
+            <input type="text" id="drop_first_name" name="drop_first_name" placeholder="Input First Name Here" required><br>
+            
+            <label for="drop_last_name">Student's Last Name:</label>
+            <input type="text" id="drop_last_name" name="drop_last_name" placeholder="Input Last Name Here" required><br>
+            
+            <label for="drop_semester">Semester and Year:</label>
+            <input type="text" id="drop_semester" name="drop_semester" placeholder="Input Semester Then Year Here" required><br>
+            
+            <label for="drop_course_prefix">Course Prefix:</label>
+            <input type="text" id="drop_course_prefix" name="drop_course_prefix" placeholder="Input Prefix Here" required><br>
+            
+            <label for="drop_course_number">Course Number:</label>
+            <input type="text" id="drop_course_number" name="drop_course_number" placeholder="Input Course Number Here" required><br>
+            
+            <label for="drop_course_section">Course Section:</label>
+            <input type="text" id="drop_course_section" name="drop_course_section" placeholder="Input Course Section Here" required><br>
+            
+            <button type="submit">Drop Course</button>
+        </form>
+    </section>
+</body>
+</html>

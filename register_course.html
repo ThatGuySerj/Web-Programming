@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration System</title>
+    <style>
+        input {
+            width: 300px;
+            height: 30px;
+            font-size: 16px;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Course Registration System</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="Nico.html">Home Page</a></li>
+        </ul>
+    </nav>
+    
+    <section>
+        <h2>Register for a Course</h2>
+        <form>
+            <label for="first_name">Student's First Name:</label>
+            <input type="text" id="first_name" name="first_name" placeholder="Input First Name Here" required><br>
+            
+            <label for="last_name">Student's Last Name:</label>
+            <input type="text" id="last_name" name="last_name" placeholder="Input Last Name Here" required><br>
+            
+            <label for="semester">Semester and Year:</label>
+            <input type="text" id="semester" name="semester" placeholder="Input Semester Then Year Here" required><br>
+            
+            <label for="course_prefix">Course Prefix:</label>
+            <input type="text" id="course_prefix" name="course_prefix" placeholder="Input Prefix Here" required><br>
+            
+            <label for="course_number">Course Number:</label>
+            <input type="text" id="course_number" name="course_number" placeholder="Input Course Number Here" required><br>
+            
+            <label for="course_section">Course Section:</label>
+            <input type="text" id="course_section" name="course_section" placeholder="Input Course Section Here" required><br>
+            
+            <button type="submit">Register</button>
+        </form>
+    </section>
