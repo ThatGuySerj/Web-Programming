@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Instructor Selection</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="enrollment.html">Enroll Student</a></li>
+            <li><a href="instructor.html">Add Instructor</a></li>
+            <li><a href="add_course.html">Add Course</a></li>
+            <li><a href="register_course.html">Register Course</a></li>
+            <li><a href="drop_course.html">Drop Course</a></li>
+            <li><a href="Manual.html">Manual</a></li>
+            <li><a href="Nico.html">Homepage</a></li>
+        </ul>
+    </nav>
+
+    <title>Add Instructor</title>
+    <section>
+        <h2>Add Instructor</h2>
+    
+        <form class="instructor" onsubmit="return validateInstructorForm(event)">
+            <label for="first-prof">Instructor First Name</label>
+            <input type="text" id="firstname" placeholder="Enter first name">
+
+            <label for="last-prof">Instructor Last Name</label>
+            <input type="text" id="lastname" placeholder="Enter last name">
+
+            <label for="rank">Instructor Rank</label>
+            <select id="rank">
+                <option value="">Select Rank</option>
+                <option value="Instructor">Instructor</option>
+                <option value="Assistant Professor">Assistan Professor</option>
+                <option value="Associate Professor">Associate Professor</option>
+                <option value="Professor">Professor</option>  
+            </select>
+
+            <label for="dept">Instructor Department</label>
+            <input type="text" id="department" placeholder="Enter professor department">
+
+            <label for="email">Instructor Email Address</label>
+            <input type="email" id="email" placeholder="Enter email">
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <div id="results" style="display: none;">
+        <h2>Instructor Confirmation</h2>
+        <p><strong>Name:</strong> <span id="display-name"></span></p>
+        <p><strong>Rank:</strong> <span id="display-rank"></span></p>
+        <p><strong>Department:</strong> <span id="display-department"></span></p>
+        <p><strong>Email:</strong> <span id="display-email"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>

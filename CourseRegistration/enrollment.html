@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment</title>
+    <link rel="stylesheet" href="test.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Optional: Style the results section */
+        #results {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Student Enrollment</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="enrollment.html">Enroll Student</a></li>
+            <li><a href="instructor.html">Add Instructor</a></li>
+            <li><a href="add_course.html">Add Course</a></li>
+            <li><a href="register_course.html">Register Course</a></li>
+            <li><a href="drop_course.html">Drop Course</a></li>
+            <li><a href="Manual.html">Manual</a></li>
+            <li><a href="Nico.html">Homepage</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Enroll a Student</h2>
+        <form class="enrollstud" onsubmit="return ValidateEnrollForm(event)">
+            
+            <label for="firstname">Student First Name</label>
+            <input type="text" id="firstname" placeholder="Enter first name" required>
+
+            <label for="lastname">Student Last Name</label>
+            <input type="text" id="lastname" placeholder="Enter last name" required>
+
+            <label for="year">Student Year</label>
+            <select id="year" required>
+                <option value="">Select Year</option>
+                <option value="Freshman">Freshman</option>
+                <option value="Sophomore">Sophomore</option>
+                <option value="Junior">Junior</option>
+                <option value="Senior">Senior</option>  
+            </select>
+
+            <label for="major">Student Major</label>
+            <input type="text" id="major" placeholder="Enter major">
+
+            <label for="email">Student Email Address</label>
+            <input type="email" id="email" placeholder="Enter email" required>
+
+            <button type="submit">Enroll Student</button>
+        </form>
+    </section>
+
+    <div id="results" style="display: none;">
+        <h2>Enrollment Confirmation</h2>
+        <p><strong>Name:</strong> <span id="display-name"></span></p>
+        <p><strong>Year:</strong> <span id="display-year"></span></p>
+        <p><strong>Major:</strong> <span id="display-major"></span></p>
+        <p><strong>Email:</strong> <span id="display-email"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

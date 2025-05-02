@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration System</title>
+    <link rel="stylesheet" href="test.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Optional: Style the results section */
+        #results {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Register Course</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="enrollment.html">Enroll Student</a></li>
+            <li><a href="instructor.html">Add Instructor</a></li>
+            <li><a href="add_course.html">Add Course</a></li>
+            <li><a href="register_course.html">Register Course</a></li>
+            <li><a href="drop_course.html">Drop Course</a></li>
+            <li><a href="Manual.html">Manual</a></li>
+            <li><a href="Nico.html">Homepage</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Register for a Course</h2>
+        <form class="registercourse" onsubmit="return validateRegisterCourseForm(event)">
+
+            <label for="first_name">Student's First Name:</label>
+            <input type="text" id="first_name" name="first_name" placeholder="Input First Name Here" required> 
+            
+            <label for="last_name">Student's Last Name:</label>
+            <input type="text" id="last_name" name="last_name" placeholder="Input Last Name Here" required> 
+            
+            <label for="semester">Semester:</label>
+            <select id="semester" name="semester" required>
+                <option value="Spring">Spring</option>
+                <option value="Summer">Summer</option>
+                <option value="Fall">Fall</option>
+            </select>
+            
+            <label for ="year"> Year:</label>
+            <input type="text" id="year" name="year" placeholder="Input Year Here" required> 
+
+            <label for="course_prefix">Course Prefix:</label>
+            <input type="text" id="course_prefix" name="course_prefix" placeholder="Input Prefix Here" required> 
+            
+            <label for="course_number">Course Number:</label>
+            <input type="text" id="course_number" name="course_number" placeholder="Input Course Number Here" required> 
+            
+            <label for="course_section">Course Section:</label>
+            <input type="text" id="course_section" name="course_section" placeholder="Input Course Section Here" required> 
+            
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <div id="results" style="display: none;">
+        <h2>Registration Confirmation</h2>
+        <p><strong>Name:</strong> <span id="display-name"></span></p>
+        <p><strong>Semester:</strong> <span id="display-semester"></span></p>
+        <p><strong>Course Prefix:</strong> <span id="display-course-prefix"></span></p>
+        <p><strong>Course Number:</strong> <span id="display-course-number"></span></p>
+        <p><strong>Course Section:</strong> <span id="display-course-section"></span></p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

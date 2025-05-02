@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Drop System</title>
+    <link rel="stylesheet" href="test.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Optional: Style the results section */
+        #results {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Drop Course</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="enrollment.html">Enroll Student</a></li>
+            <li><a href="instructor.html">Add Instructor</a></li>
+            <li><a href="add_course.html">Add Course</a></li>
+            <li><a href="register_course.html">Register Course</a></li>
+            <li><a href="drop_course.html">Drop Course</a></li>
+            <li><a href="Manual.html">Manual</a></li>
+            <li><a href="Nico.html">Homepage</a></li>
+        </ul>
+    </nav>
+    
+    <section>
+        <h2>Drop a Course</h2>
+        <form class="dropcourse" onsubmit="return validateDropCourseForm(event)">
+            <label for="drop_first_name">Student's First Name:</label>
+            <input type="text" id="drop_first_name" name="drop_first_name" placeholder="Input First Name Here" required> 
+            
+            <label for="drop_last_name">Student's Last Name:</label>
+            <input type="text" id="drop_last_name" name="drop_last_name" placeholder="Input Last Name Here" required> 
+            
+            <label for="drop_semester">Semester:</label>
+            <select id="drop_semester" name="drop_semester" required>
+                <option value="Spring">Spring</option>
+                <option value="Summer">Summer</option>
+                <option value="Fall">Fall</option>
+            </select>
+
+            <label for ="drop_year"> Year:</label>
+            <input type="text" id="drop_year" name="year" placeholder="Input Year Here" required> 
+
+
+            <label for="drop_course_prefix">Course Prefix:</label>
+            <input type="text" id="drop_course_prefix" name="drop_course_prefix" placeholder="Input Prefix Here" required> 
+            
+            <label for="drop_course_number">Course Number:</label>
+            <input type="text" id="drop_course_number" name="drop_course_number" placeholder="Input Course Number Here" required> 
+            
+            <label for="drop_course_section">Course Section:</label>
+            <input type="text" id="drop_course_section" name="drop_course_section" placeholder="Input Course Section Here" required> 
+            
+            <button type="submit">Drop Course</button>
+        </form>
+    </section>
+
+    <div id="results" style="display: none;">
+        <h2>Course Drop Confirmation</h2>
+        <p><strong>Student Name:</strong> <span id="display-name"></span></p>
+        <p><strong>Semester:</strong> <span id="display-semester"></span></p>
+        <p><strong>Course:</strong> <span id="display-course"></span></p>
+        <p><strong>Section:</strong> <span id="display-section"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

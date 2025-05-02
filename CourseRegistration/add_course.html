@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <title>Add Course</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Optional: Style the results section */
+        #results {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Add Course</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="enrollment.html">Enroll Student</a></li>
+            <li><a href="instructor.html">Add Instructor</a></li>
+            <li><a href="add_course.html">Add Course</a></li>
+            <li><a href="register_course.html">Register Course</a></li>
+            <li><a href="drop_course.html">Drop Course</a></li>
+            <li><a href="Manual.html">Manual</a></li>
+            <li><a href="Nico.html">Homepage</a></li>
+        </ul>
+    </nav>
+
+
+    <section>
+        <h2>Add Course</h2>
+        <form class="addcourse" onsubmit="return validateAddCourseForm(event)">
+
+            <label for="semester">Semester and Year:</label>
+            <select id="semester" name="semester" required>
+                <option value="Spring">Spring</option>
+                <option value="Summer">Summer</option>
+                <option value="Fall">Fall</option>
+            </select><br>
+
+            <label for="year">Year:</label>
+            <input type="text" id="year" name="year" placeholder="Input Year Here" required><br>
+            
+            <label for="course_prefix">Course Prefix:</label>
+            <input type="text" id="course_prefix" name="course_prefix" placeholder="Input Prefix Here" required><br>
+            
+            <label for="course_number">Course Number:</label>
+            <input type="text" id="course_number" name="course_number" placeholder="Input Course Number Here" required><br>
+            
+            <label for="course_section">Course Section:</label>
+            <input type="text" id="course_section" name="course_section" placeholder="Input Course Section Here" required><br>
+            
+            <label for="course_name">Course Name:</label>
+            <input type="text" id="course_name" name="course_name" placeholder="Input Course Name Here" required><br>
+            
+            <label for="room">Room (Building & Room Number):</label>
+            <input type="text" id="room" name="room" placeholder="Input Room Here" required><br>
+            
+            <label for="days">Days Offered:</label>
+            <select id="days" name="days" required>
+                <option value="MWF">Monday, Wednesday, Friday</option>
+                <option value="MW">Monday, Wednesday</option>
+                <option value="TR">Tuesday, Thursday</option>
+                <option value="M">Monday</option>
+                <option value="T">Tuesday</option>
+                <option value="W">Wednesday</option>
+                <option value="R">Thursday</option>
+            </select><br>
+            
+            <label for="time">Time:</label>
+            <select id="time" name="time" required>
+                <!--MWF-->
+                <option value="8:00 AM - 8:50 AM">8:00 AM - 8:50 AM</option>
+                <option value="9:00 AM - 9:50 AM">9:00 AM - 9:50 AM</option>
+                <option value="10:00 AM - 10:50 AM">10:00 AM - 10:50 AM</option>
+                <option value="11:00 AM - 11:50 AM">11:00 AM - 11:50 AM</option>
+                <option value="12:00 PM - 12:50 PM">12:00 PM - 12:50 PM</option>
+                <option value="1:00 PM - 1:50 PM">1:00 PM - 1:50 PM</option>
+                <option value="2:00 PM - 2:50 PM">2:00 PM - 2:50 PM</option>
+                <option value="3:00 PM - 3:50 PM">3:00 PM - 3:50 PM</option>
+                
+                <!--75 Min-->
+                <option value="8:00 AM - 9:15 PM">8:00 AM - 9:15 AM</option>
+                <option value="9:30 AM - 10:45 AM">9:30 AM - 10:45 PM</option>
+                <option value="11:00 AM - 12:15 PM">11:00 AM - 12:15 PM</option>
+                <option value="1:00 PM - 2:15 PM">1:00 PM - 2:15 PM</option>
+                <option value="2:30 PM - 3:45 PM">2:30 PM - 3:45 PM</option>
+                
+                <!--110 Min-->
+                <option value="9:00 AM - 10:50 AM PM">9:00 AM - 10:50 AM</option>
+                <option value="1:00 PM - 2:50 PM">1:00 PM - 2:50 PM</option>
+                
+                <!--Any Day Night/Lab-->
+                <option value="1:00 PM - 4:00 PM">1:00 PM - 4:00 PM</option>
+                <option value="2:00 PM - 5:00 PM">2:00 PM - 5:00 PM</option>
+                <option value="7:00 PM - 9:30 PM">7:00 PM - 9:30 PM</option>
+
+            </select><br>
+            
+            <label for="credit_hours">Credit Hours:</label>
+            <input type="text" id="credit_hours" name="credit_hours" placeholder="Input Credit Hours Here" required><br>
+            
+            <label for="instructor_first_name">Instructor First Name:</label>
+            <input type="text" id="instructor_first_name" name="instructor_first_name" placeholder="Input Instructor First Name Here" required><br>
+            
+            <label for="instructor_last_name">Instructor Last Name:</label>
+            <input type="text" id="instructor_last_name" name="instructor_last_name" placeholder="Input Instructor Last Name Here" required><br>
+            
+            <label for="enrollment_cap">Enrollment Cap:</label>
+            <input type="text" id="enrollment_cap" name="enrollment_cap" placeholder="Input Enrollment Cap Here" required><br>
+            
+            <button type="submit">Add Course</button>
+        </form>
+    </section>
+
+    <div id="results" style="display: none;">
+        <h2>Course Confirmation</h2>
+        <p><strong>Semester:</strong> <span id="display-semester"></span></p>
+        <p><strong>Year:</strong> <span id="display-year"></span></p>
+        <p><strong>Course Prefix:</strong> <span id="display-course-prefix"></span></p>
+        <p><strong>Course Number:</strong> <span id="display-course-number"></span></p>
+        <p><strong>Course Section:</strong> <span id="display-course-section"></span></p>
+        <p><strong>Course Name:</strong> <span id="display-course-name"></span></p>
+        <p><strong>Room:</strong> <span id="display-room"></span></p>
+        <p><strong>Days Offered:</strong> <span id="display-days"></span></p>
+        <p><strong>Time:</strong> <span id="display-time"></span></p>
+        <p><strong>Credit Hours:</strong> <span id="display-credit-hours"></span></p>
+        <p><strong>Instructor First Name:</strong> <span id="display-instructor-first-name"></span></p>
+        <p><strong>Instructor Last Name:</strong> <span id="display-instructor-last-name"></span></p>
+        <p><strong>Enrollment Cap:</strong> <span id="display-enrollment-cap"></span></p>
+    </div>
+        
+    <script src="script.js"></script>
+
+</body>
+</html>

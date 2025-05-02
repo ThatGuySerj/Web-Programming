@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration Manuals</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .container { max-width: 900px; margin: auto; padding: 20px; }
+        nav { background: #333; padding: 10px; }
+        nav a { color: white; margin: 10px; text-decoration: none; }
+        section { margin-bottom: 30px; }
+        h2 { border-bottom: 2px solid #333; padding-bottom: 5px; }
+    </style>
+    
+</head>
+<body>
+    <nav>
+        <a href="Nico.html">Home Page</a>
+        <a href="#user-manual">User Manual</a>
+        <a href="#programmer-manual">Programmer Manual</a>
+    </nav>
+    
+    <div class="container">
+        
+        <section id="user-manual">
+            <h2>User Manual</h2>
+            <p>Welcome to the Course Registration System. This manual will provide and overview of the system.</p>
+            
+            <h3>Navigation Menu</h3>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#pages-summary">Web Pages Summary</a></li>
+                <li><a href="#detailed-pages">Detailed Page Descriptions</a></li>
+            </ul>
+            
+            <h3 id="overview">Overview</h3>
+            <p>The course registration system allows students to enroll in courses, view schedules, and manage registrations.
+                The home page is the base of operations for the site, each page has a link back to the home page so that you can
+                do each step of the process as needed. There are six tabs, enroll student, add instructor, register course, add course, drop course, and the manuals.
+            </p>
+            
+            <h3 id="pages-summary">Web Pages Summary</h3>
+            <ul>
+                <li><b>Home Page:</b> Location of all links relevant to registering for classes at Marietta College</li>
+
+                <li><b>Enroll Student Page:</b> This page is where a student can enroll for classes and verify that they are eligible.
+                This page contains fields for first/last name, major, grade level, and email address. For example, John Smith, Buisness,
+                Freshman, and a email address with @marietta.edu, would be a valid entry. Name fields take onle text input, and the major field is optional. 
+                </li>
+
+                <li><b>Add Instructor:</b> This page is were you would look at what professors you want for to take or what they are teaching.
+                A valid entry on this page would be a text first and last name of the professor, a rank, department, and email address. An example of a valid entry would be 
+                John Smith, Professor, Buisness, and a email address with @marietta.edu. Instructor rank is optional         
+                </li>
+
+                <li><b>Add Course:</b> This page is dedicated to searching for available courses based on days of the week a class is available and the time its offered.
+                This page contains fields for the class semester, course number, course name, what time its offered, and what days of the week its offered. A exceptable input would be 
+                Fall 2025, CSCI, 330, 01, Web Programming, Selby 239, MWF, 1 PM to 1:50 PM, Matt Williamson, 20, Credit Hours 3. 
+                
+                </li>
+
+                <li><b>Register Course:</b> This page is were a student would register for classes. This page does have quite a few fields, firstname, lastname, semester and year of course,
+                    course prefix, course section, course number, and course name. For example, if a student wanted to register for a course in the Fall of 2025, they would enter their first/last name,
+                    the semester and year (Fall 2025), the course prefix (CSCI), the course section (01), the course number (330), and the course name (Web Programming). All of the fields are required.
+
+                
+                </li>
+
+                <li><b>Drop Course:</b> This is were a student would request to drop a class. This page has less fields than say the add course page, but the same rules apply. Firstname, lastname, and course prefix are 
+                    text fields. Course section and course number are going to only take numerical values. An example of an acceptable input is Jeff Bezos, Fall 2025, CSCI, 330, 01.
+                    This would indicate that Jeff Bezos is trying to drop the course CSCI 330 section 01 for the Fall of 2025. All fields are required to be filled out in order to submit the request.
+                
+                </li>
+                
+            </ul>
+            
+            <h3 id="detailed-pages">Detailed Page Descriptions</h3>
+            <h4>Course Registration System Pages</h4>
+            <p>The registration system contains the six pages listed above. Each page has a ton of different fields, but each one is labeled with what is the intended input.
+                The home page is the home base, its where the navigation bar is and the introduction to the site. The next page is the enroll student page, here we have fields
+                for first/last name, major, grade level, and email address. The next page is where an instructor is added, so this page has first/last name, professor rank, department, and email.
+                The third page is for adding a course, and this page has alot of fields for the user, such as the class semester, course number, course name, what time its offered, what days of the week its offered.
+                This page contains alot of information, but its all labeled with what the intended input is. The register course page is similar, but its just the student first/last name, the semester and year of the course,
+                and the course id number. The fifth page is for dropping a course, so fields are course number, semester and time taken, and the students first/last name.
+
+            </p>
+
+        </section>
+
+        <section id="programmer-manual">
+            <h2>Programmer Manual</h2>
+            <p>This manual provides technical details for developers maintaining the system.</p>
+            
+            <h3>Navigation Menu</h3>
+            <ul>
+                <li><a href="#tech-overview">Technical Overview</a></li>
+                <li><a href="#pages-summary-tech">Web Pages Summary</a></li>
+                <li><a href="#functions">Functions</a></li>
+            </ul>
+            
+            <h3 id="tech-overview">Technical Overview</h3>
+            <p>The system is built using HTML, CSS, JavaScript for frontend, and PHP/MySQL for backend. The current system is only a series of HTML
+                pages. Each html is pretty much identical, with the difference coming from each coders way of doing things. The core part of each html page
+                is the forms section, which is where the users will input all of their relevant information. Each page currently has form validation using JavaScript,
+                which checks for valid input before allowing the user to submit the form. This is done using a series of if statements and checking the values of each input box.
+                Down the line, the forms will be submitted using the POST method, which sends the data to a server for processing. Since there is no backend currently, the forms will not actually submit
+                There is however, a confirmation method that the information was acceptable and that it could be sent to the server.
+            </p>
+            
+            <h3 id="pages-summary-tech">Web Pages Summary</h3>
+            <ul>
+                <li><b>index.html:</b> Home page which just acts as a home base for all the other pages.</li>
+                <li><b>enrollment.html:</b> This page is where a student would enroll. </li>
+                <li><b>instructor.html:</b> This page is were a student would pick a professor.</li>
+                <li><b>addcourse.html:</b> This page is dedicated to adding a course to a students schedule.</li>
+                <li><b>registercourse.html:</b> Course registration page, so this page contains all the course information so the student can add it to their schedule. </li>
+                <li><b>dropcourse.html</b> Drop course page, this is were you would request to drop a course from your schedule</li>
+                <li><b>manual.html:</b> This is the manual page you are currently on, it contains information for both the user and programmer manuals.</li>
+                <li><b>style.css:</b> This is the CSS file that contains all the styling for the pages. It is used to make the pages look nice and presentable.</li>
+                <li><b>script.js:</b> This is the JavaScript file that contains all the functions for validating the forms on each page. It checks for valid input before allowing the user to submit the form.</li>
+            </ul>
+            
+            <h3 id="functions">Page Functions</h3>
+                <p>In this section of the manual, we are going to dive into detail on how the site functions. The pages all follow a similar format, they have input boxes
+                    for individual user information. Page by page they are structured the same, the enrollment and instructor page contains fields for first and last names, 
+                    which are just input boxes. Since theres no backend (for now), some of the inputs will be invalid in the future. For example, the register page and enrollment
+                    page need a list of majors and there respective acronyms that are acceptable. With the addition of the JavaScript validation, the pages will check for valid input before allowing the user to submit the form.
+                    For example, if a user tries to submit the enrollment form without entering a first name, the JavaScript will alert them that they need to fill out that field.
+                    This is done using a series of if statements in the JavaScript code. Each page has its own unique validation function that checks for the required fields.
+                    For example, in the enrollment page, the JavaScript function will check if the first name and last name fields are empty. If they are, it will alert the user to fill out those fields before submitting the form.
+                    Once the user has filled out all the required fields and submitted the form, the JavaScript will then check if all the inputs are valid. If they are, it will display a confirmation message to the user.
+                    This confirmation message will let the user know that their information has been successfully submitted and that they can proceed to the next step in the registration process.
+                    Each page also has a unique set of fields that are required for that specific page. For example, the add course page requires the user to input the semester, course number, course name, time offered, and days of the week offered.
+                    This page will also check for valid input, such as making sure the course number is a valid number and that the course name is not empty. If any of the fields are invalid, the JavaScript will alert the user to correct the input before submitting the form.
+                </p>
+
+                <p>
+                    The HTML pages are identical in structure and layout, variable names are different, but they are generally the same. Each JavaScript function is apart of the same script. Theire are the 
+                    five functions dedicated to validating input, validateEnrollmentForm(), validateInstructorForm(), validateAddCourseForm(), validateRegisterCourseForm(), and validateDropCourseForm().
+                    Each function is responsible for validating the input on its respective page. For example, the validateEnrollmentForm() function checks if the first name and last name fields are empty,
+                    and if they are, it will alert the user to fill out those fields before submitting the form. The validateInstructorForm() function checks if the first name, last name, and email fields are filled out correctly.
+                    It will also check if the email address is in the correct format (i.e. contains an @ symbol and a domain). If any of the fields are invalid, the JavaScript will alert the user to correct the input before submitting the form.
+                    The validateAddCourseForm() function checks if the semester, course number, course name, time offered, and days of the week offered fields are filled out correctly.
+                    It will also check if the course number is a valid number and if the course name is not empty. If any of the fields are invalid, the JavaScript will alert the user to correct the input before submitting the form.
+                    The validateRegisterCourseForm() function checks if the first name, last name, semester and year of the course, course prefix, course section, course number, and course name fields are filled out correctly.
+                    It will also check if the course prefix is a valid string and if the course section is a valid number. If any of the fields are invalid, the JavaScript will alert the user to correct the input before submitting the form.
+                    Finally, the validateDropCourseForm() function checks if the first name, last name, semester and year of the course, course prefix, course section, and course number fields are filled out correctly.
+                    It will also check if the course prefix is a valid string and if the course section and course number are valid numbers. If any of the fields are invalid, the JavaScript will alert the user to correct the input before submitting the form.
+                    The final function is to dynamically add and remove days depending on which day is being registered, Monday, Wednesday, and Friday classes will be 50 minutes, any class offered one day of the week is a 1 hour and 50 minute class, a lab, or a night class, and Tuesday and Thursday classes are 75 minutes
+                </p>
+
+        </section>
+    </div>
+    
+</body>
+</html>
